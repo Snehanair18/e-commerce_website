@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## E-Commerce Website (Flipkart-like)
 
 This is a full-stack e-commerce website built with:
@@ -69,3 +70,6 @@ Visit the printed frontend URL (usually `http://localhost:5173`) in your browser
   - Build with `npm run build` and deploy the `dist/` output if needed.
 
 
+=======
+# e-commerce_website
+>>>>>>> 72fa221b3a572e93ff8139a886a338edb314c30a
