@@ -7,13 +7,10 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(
-  cors({
-    origin: "https://coruscating-hummingbird-f87dbe.netlify.app",
-    credentials: true,
-  })
-);
+// ✅ FIXED CORS (important)
+app.use(cors());
+app.options("*", cors());
+
 app.use(express.json());
 
 // Connect to MongoDB
@@ -26,6 +23,8 @@ mongoose
 app.get("/", (req, res) => {
   res.send("Backend is working!");
 });
+
+// ✅ Products API
 app.get("/api/products", (req, res) => {
   res.json([
     {
