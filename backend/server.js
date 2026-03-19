@@ -21,6 +21,28 @@ mongoose
 app.get("/", (req, res) => {
   res.send("Backend is working!");
 });
+app.get("/api/products", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      name: "Smartphone",
+      price: 20000,
+      image: "https://via.placeholder.com/150"
+    },
+    {
+      id: 2,
+      name: "Laptop",
+      price: 50000,
+      image: "https://via.placeholder.com/150"
+    },
+    {
+      id: 3,
+      name: "Headphones",
+      price: 2000,
+      image: "https://via.placeholder.com/150"
+    }
+  ]);
+});
 
 // Port
 const PORT = process.env.PORT || 5000;
