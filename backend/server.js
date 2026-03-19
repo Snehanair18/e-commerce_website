@@ -8,7 +8,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "*" }));
+app.use(
+  cors({
+    origin: "https://coruscating-hummingbird-f87dbe.netlify.app",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Connect to MongoDB
